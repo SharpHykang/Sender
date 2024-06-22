@@ -1,0 +1,23 @@
+﻿<Window x:Class="Sender.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sender"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBlock Text="当前状态：" HorizontalAlignment="Left" Margin="120,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62"/>
+        <Grid Name="radioGroup">
+            <RadioButton Name="radioButton1" Content="准备" Tag="准备" GroupName="status" HorizontalAlignment="Left" Margin="188,63,0,0" VerticalAlignment="Top"/>
+            <RadioButton Name="radioButton2" Content="工作" Tag="工作" GroupName="status" HorizontalAlignment="Left" Margin="248,63,0,0" VerticalAlignment="Top"/>
+            <RadioButton Name="radioButton3" Content="完成" Tag="完成" GroupName="status" HorizontalAlignment="Left" Margin="312,63,0,0" VerticalAlignment="Top"/>
+        </Grid>
+        <Button Content="发送状态" HorizontalAlignment="Left" Margin="380,60,0,0" VerticalAlignment="Top" Click="sendStatus_click"/>
+
+        <TextBlock Text="图片文件名：" HorizontalAlignment="Left" Margin="110,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
+        <TextBox Name="fileName" HorizontalAlignment="Left" Margin="188,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="发送图片" HorizontalAlignment="Left" Margin="380,111,0,0" VerticalAlignment="Top" Click="sendPicture_click"/>
+        
+    </Grid>
+</Window>
